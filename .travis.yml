@@ -10,12 +10,6 @@ env:
 
 matrix:
   include:
-    - env: ZSH=zsh-4.3.5
-    - env: ZSH=zsh-4.3.6
-    - env: ZSH=zsh-4.3.7
-    - env: ZSH=zsh-4.3.8
-    - env: ZSH=zsh-4.3.9
-    - env: ZSH=zsh-4.3.10
     - env: ZSH=zsh-4.3.11
     - env: ZSH=zsh-4.3.12
     - env: ZSH=zsh-4.3.13

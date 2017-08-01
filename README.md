@@ -10,12 +10,6 @@ The images are based on `debian:stretch`.
 
 The images are available on [Docker Hub](https://hub.docker.com/u/zshusers):
 
-- [4.3.5](https://hub.docker.com/r/zshusers/zsh-4.3.5)
-- [4.3.6](https://hub.docker.com/r/zshusers/zsh-4.3.6)
-- [4.3.7](https://hub.docker.com/r/zshusers/zsh-4.3.7)
-- [4.3.8](https://hub.docker.com/r/zshusers/zsh-4.3.8)
-- [4.3.9](https://hub.docker.com/r/zshusers/zsh-4.3.9)
-- [4.3.10](https://hub.docker.com/r/zshusers/zsh-4.3.10)
 - [4.3.11](https://hub.docker.com/r/zshusers/zsh-4.3.11)
 - [4.3.12](https://hub.docker.com/r/zshusers/zsh-4.3.12)
 - [4.3.13](https://hub.docker.com/r/zshusers/zsh-4.3.13)
