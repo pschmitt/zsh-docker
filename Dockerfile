@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 ARG url
 ARG build_directory=/tmp/zsh-sources
