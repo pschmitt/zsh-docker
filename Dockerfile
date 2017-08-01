@@ -13,6 +13,7 @@ RUN curl -L $url | tar xvz --strip-components=1
 RUN ./Util/preconfig
 RUN ./configure --enable-pcre --enable-cap --without-tcsetpgrp
 RUN make
+RUN make test
 RUN make install
 RUN make install.info || true # Issue 4
 
