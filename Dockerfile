@@ -8,7 +8,7 @@ RUN apt-get install -y -q git curl gcc make autoconf ncurses-dev libpcre3-dev yo
 
 WORKDIR $build_directory
 
-RUN curl -L $url | tar xvz --strip-components=1
+RUN curl -LSf $url | tar xvz --strip-components=1
 
 RUN ./Util/preconfig
 RUN ./configure --enable-pcre --enable-cap --without-tcsetpgrp
