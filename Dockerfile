@@ -4,7 +4,7 @@ ARG url
 ARG build_directory=/tmp/zsh-sources
 
 RUN apt-get update
-RUN apt-get install -y -q git unzip curl gcc make autoconf ncurses-dev python-pip
+RUN apt-get install -y -q git curl gcc make autoconf ncurses-dev python-pip
 RUN pip install cram
 
 WORKDIR $build_directory
