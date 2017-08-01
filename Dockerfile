@@ -21,4 +21,6 @@ RUN make install.bin install.modules install.fns || :
 
 RUN rm -rf $build_directory
 
+RUN zsh --version
+
 WORKDIR /
