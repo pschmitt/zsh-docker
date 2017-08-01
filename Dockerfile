@@ -9,7 +9,7 @@ RUN pip install cram
 
 WORKDIR $build_directory
 
-RUN curl -L $url | tar xvz
+RUN curl -L $url | tar xvz --strip-components=1
 
 RUN rm -rf ./Doc
 RUN mkdir ./Doc && echo "all:\n\n" > ./Doc/Makefile.in

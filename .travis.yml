@@ -10,19 +10,19 @@ env:
 
 matrix:
   include:
-    - env: ZSH=4.3.11
-    - env: ZSH=4.3.17
-    - env: ZSH=5.0.0
-    - env: ZSH=5.1.1
-    - env: ZSH=5.2
-    - env: ZSH=5.3
-    - env: ZSH=5.3.1
+    - env: ZSH=zsh-4.3.11
+    - env: ZSH=zsh-4.3.17
+    - env: ZSH=zsh-5.0.0
+    - env: ZSH=zsh-5.1.1
+    - env: ZSH=zsh-5.2
+    - env: ZSH=zsh-5.3
+    - env: ZSH=zsh-5.3.1
     - env: ZSH=master
 
 before_script:
   - uname -a
   - docker --version
-  - DOCKER_HUB_REPO=zshusers/zsh-$ZSH
+  - DOCKER_HUB_REPO=zshusers/zsh-${ZSH#zsh-}
 
 script:
   - docker build -t $DOCKER_HUB_REPO --build-arg url=https://api.github.com/repos/zsh-users/zsh/tarball/${ZSH} .
