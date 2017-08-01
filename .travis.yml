@@ -20,8 +20,6 @@ matrix:
     - env: ZSH=master
 
 before_script:
-  - uname -a
-  - docker --version
   - DOCKER_HUB_REPO=zshusers/zsh-${ZSH#zsh-}
 
 script:
