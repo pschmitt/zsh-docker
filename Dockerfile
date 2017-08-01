@@ -1,7 +1,7 @@
+FROM debian:jessie
+
 ARG url
 ARG build_directory=/tmp/zsh-sources
-
-FROM debian:jessie
 
 RUN apt-get update
 RUN apt-get install -y -q git unzip curl gcc make autoconf ncurses-dev python-pip
