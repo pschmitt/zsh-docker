@@ -1,5 +1,5 @@
 # If you update this line, update the first line of README.txt.
-FROM debian:stretch
+FROM debian:jessie
 
 # Arguments
 ARG url
@@ -8,9 +8,7 @@ ARG build_user=zshbuild
 
 # Dependencies
 RUN apt-get update
-RUN apt-get install -y -q git curl netselect-apt
-RUN netselect-apt stretch --sources --outfile /etc/apt/sources.list
-RUN apt-get update
+RUN apt-get install -y git curl
 RUN apt-get build-dep -y zsh
 
 # Build and tests
