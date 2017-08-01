@@ -1,16 +1,19 @@
-### ZSH-Docker
-[![Build Status](https://travis-ci.org/desyncr/zsh-docker.svg?branch=master)](https://travis-ci.org/desyncr/zsh-docker)
+zsh-docker [![Build Status](https://travis-ci.org/zsh-users/zsh-docker.svg?branch=master)](https://travis-ci.org/zsh-users/zsh-docker)
+==========
 
-Zsh+Docker integration to build Docker images based off `debian:jessie`.
+**[Zsh](http://www.zsh.org) [Docker](https://www.docker.com) containers.**
 
-Tested with zsh versions:
+Images
+------
 
-- 5.3.1
-- 5.3
-- 5.2
-- 5.1.1
-- 5.0.0
-- 4.3.17
-- 4.3.11
+The images are based on `debian:jessie`.
 
-For already built images see: https://hub.docker.com/u/desyncr/
+The images are available on [Docker Hub](https://hub.docker.com/u/zshusers):
+
+- [5.3.1](https://hub.docker.com/u/zshusers/TODO)
+- [5.3](https://hub.docker.com/u/zshusers/TODO)
+- [5.2](https://hub.docker.com/u/zshusers/TODO)
+- [5.1.1](https://hub.docker.com/u/zshusers/TODO)
+- [5.0.0](https://hub.docker.com/u/zshusers/TODO)
+- [4.3.17](https://hub.docker.com/u/zshusers/TODO)
+- [4.3.11](https://hub.docker.com/u/zshusers/TODO)
