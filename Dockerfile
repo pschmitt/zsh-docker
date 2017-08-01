@@ -14,7 +14,7 @@ RUN ./Util/preconfig
 RUN ./configure --enable-pcre --enable-cap --without-tcsetpgrp
 RUN make
 RUN make install
-RUN make install.info
+RUN make install.info || true # Issue 4
 
 RUN rm -rf $build_directory
 
