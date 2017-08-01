@@ -6,7 +6,7 @@ zsh-docker [![Build Status](https://travis-ci.org/zsh-users/zsh-docker.svg?branc
 Images
 ------
 
-The images are based on `debian:jessie`.
+The images are based on `debian:stretch`.
 
 The images are available on [Docker Hub](https://hub.docker.com/u/zshusers):
 

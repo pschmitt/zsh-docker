@@ -1,3 +1,4 @@
+# If you update this line, update the first line of README.txt.
 FROM debian:stretch
 
 ARG url
