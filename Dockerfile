@@ -7,8 +7,10 @@ ARG build_directory=/tmp/zshbuild
 ARG build_user=zshbuild
 
 # Dependencies
+RUN sed 's/deb /deb-src /g' /etc/apt/sources.list | tee -a /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -y -q git curl gcc make autoconf ncurses-dev libpcre3-dev yodl texinfo man-db roffit
+RUN apt-get install -y -q git curl
+RUN apt-get build-dep -y zsh
 
 # Build and tests
 # run as a non privileged user, as zsh test suite is not designed to run as root
@@ -29,5 +31,4 @@ RUN make install.info || true # Issue 4
 # Cleaning
 RUN rm -rf $build_directory
 RUN deluser --remove-home $build_user
-RUN delgroup $build_user
 WORKDIR /
