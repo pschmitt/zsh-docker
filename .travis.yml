@@ -35,6 +35,7 @@ matrix:
 
 before_install:
   - echo 'DOCKER_OPTS="--experimental=true"' | sudo tee -a /etc/default/docker
+  - sudo service docker restart
 
 before_script:
   - DOCKER_HUB_REPO=zshusers/zsh-${ZSH#zsh-}
