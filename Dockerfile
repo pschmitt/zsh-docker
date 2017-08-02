@@ -1,21 +1,17 @@
 # If you update this line, update the first line of README.txt.
-FROM debian:jessie
+FROM alpine
 
 # Arguments
 ARG ref=master
 ARG build_directory=/tmp/zsh
-ARG build_dependencies='git netselect-apt libpcre3-dev libgdbm-dev'
-ARG runtime_dependencies='libpcre3 libgdbm3'
+ARG build_dependencies='coreutils util-linux git make automake autoconf gcc binutils libc-dev ncurses-dev pcre-dev yodl texinfo man man-pages mdocml-apropos groff'
+ARG runtime_dependencies='pcre libcap gdbm'
 ARG additional_dependencies='make'
 ARG test_user=zsh
 
 # Dependencies
-RUN apt-get update
-RUN apt-get install -y -q $build_dependencies $runtime_dependencies $additional_dependencies
-RUN apt-mark auto $build_dependencies
-RUN netselect-apt jessie --sources --outfile /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get build-dep -o APT::Get::Build-Dep-Automatic=true -y zsh
+RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
+RUN apk add --update --no-cache $build_dependencies $runtime_dependencies $additional_dependencies
 
 # Build and installation
 WORKDIR $build_directory
@@ -32,14 +28,14 @@ RUN make install.info || true # Issue 4
 
 # Tests
 # run as a non privileged user, as zsh test suite is not designed to run as root
-RUN yes '' | adduser --shell /bin/sh --home $build_directory --disabled-login --disabled-password $test_user
+RUN yes '' | adduser -s /bin/sh --home $build_directory -D $test_user
 RUN chown -R $test_user $build_directory
 RUN su - $test_user -c 'make test'
 RUN deluser --remove-home $test_user
 
 # Cleaning
 RUN rm -rf $build_directory
-RUN apt-get autoremove --purge -yq
+RUN apk del $build_dependencies
 
 # Configuration
 LABEL maintainer="https://github.com/zsh-users/zsh-docker"
