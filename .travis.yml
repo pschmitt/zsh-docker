@@ -38,7 +38,7 @@ before_script:
   - DOCKER_HUB_REPO=zshusers/zsh-${ZSH#zsh-}
 
 script:
-  - docker build -t $DOCKER_HUB_REPO --build-arg url=https://api.github.com/repos/zsh-users/zsh/tarball/${ZSH} .
+  - docker build -t $DOCKER_HUB_REPO --squash --build-arg url=https://api.github.com/repos/zsh-users/zsh/tarball/${ZSH} .
 
 after_success:
   - docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
