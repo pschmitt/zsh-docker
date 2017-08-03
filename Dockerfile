@@ -37,5 +37,6 @@ RUN rm -rf $build_directory
 RUN apt-get autoremove --purge -yq
 
 # Configuration
+LABEL maintainer="https://github.com/zsh-users/zsh-docker"
 WORKDIR /
 CMD ['zsh']
