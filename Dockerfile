@@ -2,9 +2,9 @@
 FROM debian:jessie
 
 # Arguments
-ARG url
+ARG ref=master
 ARG build_directory=/tmp/zsh
-ARG build_dependencies='git curl netselect-apt libpcre3-dev libgdbm-dev'
+ARG build_dependencies='git netselect-apt libpcre3-dev libgdbm-dev'
 ARG runtime_dependencies='libpcre3 libgdbm3'
 ARG additional_dependencies='make'
 ARG test_user=zsh
@@ -19,7 +19,8 @@ RUN apt-get build-dep -o APT::Get::Build-Dep-Automatic=true -y zsh
 
 # Build and installation
 WORKDIR $build_directory
-RUN curl -LSf $url | tar xvz --strip-components=1
+RUN git clone https://github.com/zsh-users/zsh.git .
+RUN git checkout $ref
 RUN ./Util/preconfig
 RUN ./configure --prefix /usr \
                 --enable-pcre \

@@ -7,7 +7,7 @@ require-%:
 build: require-DOCKER_HUB_REPO require-DOCKER_HUB_TAG require-VERSION
 	docker build --tag $(DOCKER_HUB_REPO):$(DOCKER_HUB_TAG) \
 	             --squash \
-	             --build-arg url=https://api.github.com/repos/zsh-users/zsh/tarball/$(VERSION) \
+	             --build-arg ref=$(VERSION) \
 	             .
 
 deploy: require-DOCKER_HUB_REPO require-DOCKER_HUB_TAG require-DOCKER_HUB_USER require-DOCKER_HUB_PASS
