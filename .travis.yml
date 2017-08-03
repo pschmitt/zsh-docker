@@ -43,6 +43,10 @@ after_success:
   - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make deploy'
 
 notifications:
+  email:
+    on_success: never
+    on_failure: change
+    on_start: never
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/8a6d841b50ce6343e8a5
