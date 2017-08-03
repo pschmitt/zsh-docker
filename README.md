@@ -11,28 +11,28 @@ The images are based on `debian:jessie`, and available on [Docker Hub](https://h
 
 | Image                                                                    | To execute                       |
 | ------------------------------------------------------------------------ | -------------------------------- |
-| [4.3.11](https://hub.docker.com/r/zshusers/zsh-4.3.11)                   | `docker run zshusers/zsh-4.3.11` |
-| [4.3.12](https://hub.docker.com/r/zshusers/zsh-4.3.12)                   | `docker run zshusers/zsh-4.3.12` |
-| [4.3.13](https://hub.docker.com/r/zshusers/zsh-4.3.13)                   | `docker run zshusers/zsh-4.3.13` |
-| [4.3.14](https://hub.docker.com/r/zshusers/zsh-4.3.14)                   | `docker run zshusers/zsh-4.3.14` |
-| [4.3.15](https://hub.docker.com/r/zshusers/zsh-4.3.15)                   | `docker run zshusers/zsh-4.3.15` |
-| [4.3.16](https://hub.docker.com/r/zshusers/zsh-4.3.16)                   | `docker run zshusers/zsh-4.3.16` |
-| [4.3.17](https://hub.docker.com/r/zshusers/zsh-4.3.17)                   | `docker run zshusers/zsh-4.3.17` |
-| [5.0.0](https://hub.docker.com/r/zshusers/zsh-5.0.0)                     | `docker run zshusers/zsh-5.0.0`  |
-| [5.0.1](https://hub.docker.com/r/zshusers/zsh-5.0.1)                     | `docker run zshusers/zsh-5.0.1`  |
-| [5.0.2](https://hub.docker.com/r/zshusers/zsh-5.0.2)                     | `docker run zshusers/zsh-5.0.2`  |
-| [5.0.3](https://hub.docker.com/r/zshusers/zsh-5.0.3)                     | `docker run zshusers/zsh-5.0.3`  |
-| [5.0.4](https://hub.docker.com/r/zshusers/zsh-5.0.4)                     | `docker run zshusers/zsh-5.0.4`  |
-| [5.0.5](https://hub.docker.com/r/zshusers/zsh-5.0.5)                     | `docker run zshusers/zsh-5.0.5`  |
-| [5.0.6](https://hub.docker.com/r/zshusers/zsh-5.0.6)                     | `docker run zshusers/zsh-5.0.6`  |
-| [5.0.7](https://hub.docker.com/r/zshusers/zsh-5.0.7)                     | `docker run zshusers/zsh-5.0.7`  |
-| [5.0.8](https://hub.docker.com/r/zshusers/zsh-5.0.8)                     | `docker run zshusers/zsh-5.0.8`  |
-| [5.1](https://hub.docker.com/r/zshusers/zsh-5.1)                         | `docker run zshusers/zsh-5.1`    |
-| [5.1.1](https://hub.docker.com/r/zshusers/zsh-5.1.1)                     | `docker run zshusers/zsh-5.1.1`  |
-| [5.2](https://hub.docker.com/r/zshusers/zsh-5.2)                         | `docker run zshusers/zsh-5.2`    |
-| [5.3](https://hub.docker.com/r/zshusers/zsh-5.3)                         | `docker run zshusers/zsh-5.3`    |
-| [5.3.1](https://hub.docker.com/r/zshusers/zsh-5.3.1)                     | `docker run zshusers/zsh-5.3.1`  |
-| [zsh master](https://hub.docker.com/r/zshusers/zsh-master) (daily build) | `docker run zshusers/zsh-master` |
+| [4.3.11](https://hub.docker.com/r/zshusers/zsh-4.3.11)                   | `docker run -it zshusers/zsh-4.3.11` |
+| [4.3.12](https://hub.docker.com/r/zshusers/zsh-4.3.12)                   | `docker run -it zshusers/zsh-4.3.12` |
+| [4.3.13](https://hub.docker.com/r/zshusers/zsh-4.3.13)                   | `docker run -it zshusers/zsh-4.3.13` |
+| [4.3.14](https://hub.docker.com/r/zshusers/zsh-4.3.14)                   | `docker run -it zshusers/zsh-4.3.14` |
+| [4.3.15](https://hub.docker.com/r/zshusers/zsh-4.3.15)                   | `docker run -it zshusers/zsh-4.3.15` |
+| [4.3.16](https://hub.docker.com/r/zshusers/zsh-4.3.16)                   | `docker run -it zshusers/zsh-4.3.16` |
+| [4.3.17](https://hub.docker.com/r/zshusers/zsh-4.3.17)                   | `docker run -it zshusers/zsh-4.3.17` |
+| [5.0.0](https://hub.docker.com/r/zshusers/zsh-5.0.0)                     | `docker run -it zshusers/zsh-5.0.0`  |
+| [5.0.1](https://hub.docker.com/r/zshusers/zsh-5.0.1)                     | `docker run -it zshusers/zsh-5.0.1`  |
+| [5.0.2](https://hub.docker.com/r/zshusers/zsh-5.0.2)                     | `docker run -it zshusers/zsh-5.0.2`  |
+| [5.0.3](https://hub.docker.com/r/zshusers/zsh-5.0.3)                     | `docker run -it zshusers/zsh-5.0.3`  |
+| [5.0.4](https://hub.docker.com/r/zshusers/zsh-5.0.4)                     | `docker run -it zshusers/zsh-5.0.4`  |
+| [5.0.5](https://hub.docker.com/r/zshusers/zsh-5.0.5)                     | `docker run -it zshusers/zsh-5.0.5`  |
+| [5.0.6](https://hub.docker.com/r/zshusers/zsh-5.0.6)                     | `docker run -it zshusers/zsh-5.0.6`  |
+| [5.0.7](https://hub.docker.com/r/zshusers/zsh-5.0.7)                     | `docker run -it zshusers/zsh-5.0.7`  |
+| [5.0.8](https://hub.docker.com/r/zshusers/zsh-5.0.8)                     | `docker run -it zshusers/zsh-5.0.8`  |
+| [5.1](https://hub.docker.com/r/zshusers/zsh-5.1)                         | `docker run -it zshusers/zsh-5.1`    |
+| [5.1.1](https://hub.docker.com/r/zshusers/zsh-5.1.1)                     | `docker run -it zshusers/zsh-5.1.1`  |
+| [5.2](https://hub.docker.com/r/zshusers/zsh-5.2)                         | `docker run -it zshusers/zsh-5.2`    |
+| [5.3](https://hub.docker.com/r/zshusers/zsh-5.3)                         | `docker run -it zshusers/zsh-5.3`    |
+| [5.3.1](https://hub.docker.com/r/zshusers/zsh-5.3.1)                     | `docker run -it zshusers/zsh-5.3.1`  |
+| [zsh master](https://hub.docker.com/r/zshusers/zsh-master) (daily build) | `docker run -it zshusers/zsh-master` |
 
 
 Development
