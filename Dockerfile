@@ -20,7 +20,10 @@ RUN apt-get build-dep -o APT::Get::Build-Dep-Automatic=true -y zsh
 WORKDIR $build_directory
 RUN curl -LSf $url | tar xvz --strip-components=1
 RUN ./Util/preconfig
-RUN ./configure --enable-pcre --enable-cap --without-tcsetpgrp
+RUN ./configure --prefix /usr \
+                --enable-pcre \
+                --enable-cap \
+                --without-tcsetpgrp
 RUN make
 RUN make install
 RUN make install.info || true # Issue 4
@@ -39,4 +42,4 @@ RUN apt-get autoremove --purge -yq
 # Configuration
 LABEL maintainer="https://github.com/zsh-users/zsh-docker"
 WORKDIR /
-CMD ['zsh']
+CMD ["/usr/bin/zsh","-l"]
