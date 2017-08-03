@@ -30,3 +30,5 @@ The images are based on `debian:jessie`, and available on [Docker Hub](https://h
 - [5.3](https://hub.docker.com/r/zshusers/zsh-5.3)
 - [5.3.1](https://hub.docker.com/r/zshusers/zsh-5.3.1)
 - [zsh master](https://hub.docker.com/r/zshusers/zsh-master) (daily build)
+
+These images are built by `export ZSH=master; export DOCKER_HUB_REPO=zshusers/zsh-$ZSH; docker build -t $DOCKER_HUB_REPO --build-arg url=https://api.github.com/repos/zsh-users/zsh/tarball/${ZSH} .`.
