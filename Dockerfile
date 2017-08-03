@@ -38,3 +38,4 @@ RUN apt-get autoremove --purge -yq
 
 # Configuration
 WORKDIR /
+CMD ['zsh']
