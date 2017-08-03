@@ -3,6 +3,7 @@ zsh-docker [![Build Status](https://travis-ci.org/zsh-users/zsh-docker.svg?branc
 
 **[Zsh](http://www.zsh.org) [Docker](https://www.docker.com) containers.**
 
+
 Images
 ------
 
@@ -31,4 +32,31 @@ The images are based on `debian:jessie`, and available on [Docker Hub](https://h
 - [5.3.1](https://hub.docker.com/r/zshusers/zsh-5.3.1)
 - [zsh master](https://hub.docker.com/r/zshusers/zsh-master) (daily build)
 
-These images are built by `export ZSH=master; export DOCKER_HUB_REPO=zshusers/zsh-$ZSH; docker build -t $DOCKER_HUB_REPO --build-arg url=https://api.github.com/repos/zsh-users/zsh/tarball/${ZSH} .`.
+
+Usage
+-----
+
+To build images, the requirements are:
+
+ * [GNU make](https://www.gnu.org/software/make)
+ * [Docker](https://www.docker.com) (>=1.13), with experimental features enabled
+
+To build an image of zsh's current `master` branch:
+
+    make build
+
+To build an image of a branch (see all branches [here](https://github.com/zsh-users/zsh/branches)):
+
+    make build VERSION=schaefer/badarrays
+
+To build an image of a tag (see all tags [here](https://github.com/zsh-users/zsh/tags)):
+
+    make build VERSION=zsh-5.3.1
+
+To build an image of a commit:
+
+    make build VERSION=8abbaefaee7af75943b2b427205d0ec4a52a9b7b
+
+To deploy an image to [Docker Hub](https://hub.docker.com):
+
+    make deploy
