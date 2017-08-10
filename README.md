@@ -9,8 +9,8 @@ Usage
 
 The images are based on `debian:jessie`, and available on [Docker Hub](https://hub.docker.com/u/zshusers):
 
-| Image                                                                    | To execute                       |
-| ------------------------------------------------------------------------ | -------------------------------- |
+| Image                                                                    | To execute                           |
+| ------------------------------------------------------------------------ | ------------------------------------ |
 | [4.3.11](https://hub.docker.com/r/zshusers/zsh-4.3.11)                   | `docker run -it zshusers/zsh-4.3.11` |
 | [4.3.12](https://hub.docker.com/r/zshusers/zsh-4.3.12)                   | `docker run -it zshusers/zsh-4.3.12` |
 | [4.3.13](https://hub.docker.com/r/zshusers/zsh-4.3.13)                   | `docker run -it zshusers/zsh-4.3.13` |
@@ -33,6 +33,7 @@ The images are based on `debian:jessie`, and available on [Docker Hub](https://h
 | [5.3](https://hub.docker.com/r/zshusers/zsh-5.3)                         | `docker run -it zshusers/zsh-5.3`    |
 | [5.3.1](https://hub.docker.com/r/zshusers/zsh-5.3.1)                     | `docker run -it zshusers/zsh-5.3.1`  |
 | [5.4](https://hub.docker.com/r/zshusers/zsh-5.4)                         | `docker run -it zshusers/zsh-5.4`    |
+| [5.4.1](https://hub.docker.com/r/zshusers/zsh-5.4.1)                     | `docker run -it zshusers/zsh-5.4.1`  |
 | [zsh master](https://hub.docker.com/r/zshusers/zsh-master) (daily build) | `docker run -it zshusers/zsh-master` |
 
 
@@ -54,7 +55,7 @@ To build an image of a branch (see all branches [here](https://github.com/zsh-us
 
 To build an image of a tag (see all tags [here](https://github.com/zsh-users/zsh/tags)):
 
-    make build VERSION=zsh-5.3.1
+    make build VERSION=5.4.1
 
 To build an image of a commit:
 
