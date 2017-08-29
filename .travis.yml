@@ -32,6 +32,7 @@ matrix:
     - env: VERSION=zsh-5.3.1
     - env: VERSION=5.4
     - env: VERSION=5.4.1
+    - env: VERSION=5.4.2
     - env: VERSION=master
 
 before_install:

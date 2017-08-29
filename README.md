@@ -34,6 +34,7 @@ The images are based on `debian:jessie`, and available on [Docker Hub](https://h
 | [5.3.1](https://hub.docker.com/r/zshusers/zsh-5.3.1)                     | `docker run -it zshusers/zsh-5.3.1`  |
 | [5.4](https://hub.docker.com/r/zshusers/zsh-5.4)                         | `docker run -it zshusers/zsh-5.4`    |
 | [5.4.1](https://hub.docker.com/r/zshusers/zsh-5.4.1)                     | `docker run -it zshusers/zsh-5.4.1`  |
+| [5.4.2](https://hub.docker.com/r/zshusers/zsh-5.4.2)                     | `docker run -it zshusers/zsh-5.4.2`  |
 | [zsh master](https://hub.docker.com/r/zshusers/zsh-master) (daily build) | `docker run -it zshusers/zsh-master` |
 
 
