@@ -9,31 +9,31 @@ env:
 
 matrix:
   include:
-    - env: VERSION=zsh-4.3.11
-    - env: VERSION=zsh-4.3.12
-    - env: VERSION=zsh-4.3.13
-    - env: VERSION=zsh-4.3.14
-    - env: VERSION=zsh-4.3.15
-    - env: VERSION=zsh-4.3.16
-    - env: VERSION=zsh-4.3.17
-    - env: VERSION=zsh-5.0.0
-    - env: VERSION=zsh-5.0.1
-    - env: VERSION=zsh-5.0.2
-    - env: VERSION=zsh-5.0.3
-    - env: VERSION=zsh-5.0.4
-    - env: VERSION=zsh-5.0.5
-    - env: VERSION=zsh-5.0.6
-    - env: VERSION=zsh-5.0.7
-    - env: VERSION=zsh-5.0.8
-    - env: VERSION=zsh-5.1
-    - env: VERSION=zsh-5.1.1
-    - env: VERSION=zsh-5.2
-    - env: VERSION=zsh-5.3
-    - env: VERSION=zsh-5.3.1
-    - env: VERSION=5.4
-    - env: VERSION=5.4.1
-    - env: VERSION=5.4.2
     - env: VERSION=master
+    - env: VERSION=5.4.2
+    - env: VERSION=5.4.1
+    - env: VERSION=5.4
+    - env: VERSION=zsh-5.3.1
+    - env: VERSION=zsh-5.3
+    - env: VERSION=zsh-5.2
+    - env: VERSION=zsh-5.1.1
+    - env: VERSION=zsh-5.1
+    - env: VERSION=zsh-5.0.8
+    - env: VERSION=zsh-5.0.7
+    - env: VERSION=zsh-5.0.6
+    - env: VERSION=zsh-5.0.5
+    - env: VERSION=zsh-5.0.4
+    - env: VERSION=zsh-5.0.3
+    - env: VERSION=zsh-5.0.2
+    - env: VERSION=zsh-5.0.1
+    - env: VERSION=zsh-5.0.0
+    - env: VERSION=zsh-4.3.17
+    - env: VERSION=zsh-4.3.16
+    - env: VERSION=zsh-4.3.15
+    - env: VERSION=zsh-4.3.14
+    - env: VERSION=zsh-4.3.13
+    - env: VERSION=zsh-4.3.12
+    - env: VERSION=zsh-4.3.11
 
 before_install:
   - echo 'DOCKER_OPTS="--experimental=true"' | sudo tee -a /etc/default/docker
