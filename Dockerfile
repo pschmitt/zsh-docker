@@ -4,17 +4,16 @@ FROM debian:jessie
 # Arguments
 ARG ref=master
 ARG build_directory=/tmp/zsh
-ARG build_dependencies='git netselect-apt libpcre3-dev libgdbm-dev'
+ARG build_dependencies='git libpcre3-dev libgdbm-dev'
 ARG runtime_dependencies='libpcre3 libgdbm3'
 ARG additional_dependencies='make'
 ARG test_user=zsh
 
 # Dependencies
+RUN sed 's/^deb/deb-src/' /etc/apt/sources.list | tee -a /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y -q $build_dependencies $runtime_dependencies $additional_dependencies
 RUN apt-mark auto $build_dependencies
-RUN netselect-apt jessie --sources --outfile /etc/apt/sources.list
-RUN apt-get update
 RUN apt-get build-dep -o APT::Get::Build-Dep-Automatic=true -y zsh
 
 # Build and installation
