@@ -29,6 +29,9 @@ RUN make
 RUN make install
 RUN make install.info || true # Issue 4
 
+# FIXME temporary, debug
+RUN cat /proc/mounts
+
 # Tests
 # run as a non privileged user, as zsh test suite is not designed to run as root
 RUN yes '' | adduser --shell /bin/sh --home $build_directory --disabled-login --disabled-password $test_user
