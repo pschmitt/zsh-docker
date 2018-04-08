@@ -48,7 +48,7 @@ To build images, the requirements are:
 
 To build an image of zsh's current `master` branch:
 
-    make build
+    make build VERSION=master
 
 To build an image of a branch (see all branches [here](https://github.com/zsh-users/zsh/branches)):
 
