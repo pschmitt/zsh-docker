@@ -16,12 +16,12 @@ RUN git clone https://github.com/zsh-users/zsh.git .
 RUN git checkout $ref
 RUN ./Util/preconfig
 RUN ./configure --prefix /usr \
-RUN             --enable-pcre \
-RUN             --enable-cap \
-RUN             --enable-multibyte \
-RUN             --enable-zsh-mem \
-RUN             --with-term-lib='ncursesw tinfo' \
-RUN             --without-tcsetpgrp
+                --enable-pcre \
+                --enable-cap \
+                --enable-multibyte \
+                --enable-zsh-mem \
+                --with-term-lib='ncursesw tinfo' \
+                --without-tcsetpgrp
 RUN make
 RUN make install DESTDIR=/tmp/zsh-install
 RUN make install.info DESTDIR=/tmp/zsh-install || true
