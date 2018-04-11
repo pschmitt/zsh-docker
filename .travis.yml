@@ -1,6 +1,10 @@
 language: generic
-sudo: required
-dist: trusty
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - docker-ce
 
 env:
   global:
@@ -35,15 +39,14 @@ matrix:
     - env: VERSION=zsh-4.3.12
     - env: VERSION=zsh-4.3.11
 
-before_install:
-  - echo 'DOCKER_OPTS="--experimental=true"' | sudo tee -a /etc/default/docker
-  - sudo service docker restart
-
 script:
   - make build
 
-after_success:
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && make deploy'
+deploy:
+  provider: script
+  script: make deploy
+  on:
+    branch: master
 
 notifications:
   email:
