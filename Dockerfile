@@ -33,8 +33,7 @@ FROM bitnami/minideb:jessie
 LABEL maintainer="https://github.com/zsh-users/zsh-docker"
 WORKDIR /
 COPY --from=builder /tmp/zsh-install /
-RUN install_packages make \
-                     libcap2 \
+RUN install_packages libcap2 \
                      libtinfo5 \
                      libncursesw5 \
                      libpcre3 \
