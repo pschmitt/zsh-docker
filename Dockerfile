@@ -12,8 +12,7 @@ RUN install_packages autoconf \
                      groff \
                      man-db \
                      texinfo
-RUN git clone https://github.com/zsh-users/zsh.git .
-RUN git checkout $ref
+RUN curl -L https://api.github.com/repos/zsh-users/zsh/tarball/$ref | tar xz --strip=1
 RUN ./Util/preconfig
 RUN ./configure --prefix /usr \
                 --enable-pcre \
