@@ -18,7 +18,6 @@ RUN ./configure --prefix /usr \
                 --enable-pcre \
                 --enable-cap \
                 --enable-multibyte \
-                --enable-zsh-mem \
                 --with-term-lib='ncursesw tinfo' \
                 --without-tcsetpgrp
 RUN make

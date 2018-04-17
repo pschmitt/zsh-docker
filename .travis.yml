@@ -17,6 +17,7 @@ env:
 matrix:
   include:
     - env: VERSION=master
+    - env: VERSION=zsh-5.5.1
     - env: VERSION=zsh-5.5
     - env: VERSION=zsh-5.4.2
     - env: VERSION=5.4.1
