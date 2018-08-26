@@ -23,6 +23,7 @@ RUN ./configure --prefix /usr \
                 --without-tcsetpgrp
 RUN make
 RUN make -C Etc all FAQ FAQ.html
+RUN if test $ref = "master" ; then install_packages cm-super-minimal texlive-fonts-recommended texlive-latex-base texlive-latex-recommended ghostscript bsdmainutils ; fi
 RUN if test $ref = "master" ; then make -C Doc everything ; fi
 RUN make install DESTDIR=/tmp/zsh-install
 RUN make install.info DESTDIR=/tmp/zsh-install || true
