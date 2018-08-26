@@ -11,7 +11,8 @@ RUN install_packages autoconf \
                      yodl \
                      groff \
                      man-db \
-                     texinfo
+                     texinfo \
+                     groff
 RUN curl -L https://api.github.com/repos/zsh-users/zsh/tarball/$ref | tar xz --strip=1
 RUN ./Util/preconfig
 RUN ./configure --prefix /usr \
@@ -21,6 +22,7 @@ RUN ./configure --prefix /usr \
                 --with-term-lib='ncursesw tinfo' \
                 --without-tcsetpgrp
 RUN make
+RUN make -C Etc all FAQ FAQ.html
 RUN make install DESTDIR=/tmp/zsh-install
 RUN make install.info DESTDIR=/tmp/zsh-install || true
 RUN yes '' | adduser --shell /bin/sh --home /tmp/zsh-build --disabled-login --disabled-password zshtest
