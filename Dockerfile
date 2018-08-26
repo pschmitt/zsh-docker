@@ -23,6 +23,7 @@ RUN ./configure --prefix /usr \
                 --without-tcsetpgrp
 RUN make
 RUN make -C Etc all FAQ FAQ.html
+RUN test $ref = "master" && make -C Doc everything
 RUN make install DESTDIR=/tmp/zsh-install
 RUN make install.info DESTDIR=/tmp/zsh-install || true
 RUN yes '' | adduser --shell /bin/sh --home /tmp/zsh-build --disabled-login --disabled-password zshtest
