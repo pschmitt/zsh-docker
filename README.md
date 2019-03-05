@@ -12,6 +12,8 @@ The images are based on `debian:jessie`, and available on [Docker Hub](https://h
 | Image                                                                    | To execute                           |
 | ------------------------------------------------------------------------ | ------------------------------------ |
 | [zsh master](https://hub.docker.com/r/zshusers/zsh-master) (daily build) | `docker run -it zshusers/zsh-master` |
+| [5.7.1](https://hub.docker.com/r/zshusers/zsh-5.7.1)                     | `docker run -it zshusers/zsh-5.7.1`  |
+| [5.7](https://hub.docker.com/r/zshusers/zsh-5.7)                         | `docker run -it zshusers/zsh-5.7`    |
 | [5.6.2](https://hub.docker.com/r/zshusers/zsh-5.6.2)                     | `docker run -it zshusers/zsh-5.6.2`  |
 | [5.6.1](https://hub.docker.com/r/zshusers/zsh-5.6.1)                     | `docker run -it zshusers/zsh-5.6.1`  |
 | [5.6](https://hub.docker.com/r/zshusers/zsh-5.6)                         | `docker run -it zshusers/zsh-5.6`    |
