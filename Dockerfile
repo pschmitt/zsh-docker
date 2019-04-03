@@ -20,7 +20,7 @@ RUN ./configure --prefix /usr \
                 --enable-cap \
                 --enable-multibyte \
                 --with-term-lib='ncursesw tinfo' \
-                --without-tcsetpgrp
+                --with-tcsetpgrp
 RUN make
 RUN make -C Etc all FAQ FAQ.html
 RUN if test $ref = "master" ; then install_packages cm-super-minimal texlive-fonts-recommended texlive-latex-base texlive-latex-recommended ghostscript bsdmainutils ; fi
