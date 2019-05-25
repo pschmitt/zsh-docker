@@ -1,3 +1,4 @@
+SHELL = /bin/bash
 DOCKER_HUB_REPO := zshusers/zsh
 DOCKER_HUB_TAG ?= $${VERSION\#zsh-}
 
