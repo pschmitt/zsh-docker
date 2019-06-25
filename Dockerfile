@@ -1,4 +1,4 @@
-FROM bitnami/minideb-extras:jessie-buildpack AS builder
+FROM bitnami/minideb-extras:stretch-buildpack AS builder
 ARG ref=master
 WORKDIR /tmp/zsh-build
 RUN install_packages autoconf \
@@ -31,7 +31,7 @@ RUN yes '' | adduser --shell /bin/sh --home /tmp/zsh-build --disabled-login --di
 RUN chown -R zshtest /tmp/zsh-build
 RUN su - zshtest -c 'make test' || true
 
-FROM bitnami/minideb:jessie
+FROM bitnami/minideb:stretch
 LABEL maintainer="https://github.com/zsh-users/zsh-docker"
 WORKDIR /
 COPY --from=builder /tmp/zsh-install /
