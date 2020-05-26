@@ -12,6 +12,7 @@ The images are based on [`minideb`](https://hub.docker.com/r/bitnami/minideb), a
 | Version                                                                | To execute                           |
 | ---------------------------------------------------------------------- | ------------------------------------ |
 | [zsh master](https://hub.docker.com/r/zshusers/zsh/tags) (daily build) | `docker run -it zshusers/zsh:master` |
+| [5.8](https://hub.docker.com/r/zshusers/zsh/tags)                      | `docker run -it zshusers/zsh:5.8`    |
 | [5.7.1](https://hub.docker.com/r/zshusers/zsh/tags)                    | `docker run -it zshusers/zsh:5.7.1`  |
 | [5.7](https://hub.docker.com/r/zshusers/zsh/tags)                      | `docker run -it zshusers/zsh:5.7`    |
 | [5.6.2](https://hub.docker.com/r/zshusers/zsh/tags)                    | `docker run -it zshusers/zsh:5.6.2`  |

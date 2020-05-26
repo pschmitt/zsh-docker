@@ -11,13 +11,14 @@ services:
 
 env:
   global:
-  - VERSION_LATEST: zsh-5.7.1
+  - VERSION_LATEST: zsh-5.8
   - secure: fBtsagZDw01CGdtZNwgrGKRU6Cvbg6YQTynQK9oO60XI1ZARrMk2hOfsqMqKPSLDOi8mzabZa0W7xwPs3SgnEp6qBnkJsTrzzBPETgxdZW8PxApRfgmvWNsCBnOesTYctTB/IA6Aq5WDszhQ8roRuc0xlrvAFAflv1TMeD+yOa96OtWbwQetiieo7U0A1p3u2Q9JekcT0Ya2B9LoaVSVs8wv0Z4nnv7JU1oSvgn9VXMSih/kbLueXljGFOiPsZiUiHDhWUcAT/iTwXwf80nVbQiUwHHp/G4902Yg9xavlo4SB6+fUA76hfStr+ddl3bPZ1jQPy9YpEs6oDvS4+9qfnWA4HU1V0IRD5NuVhnwd9dfVxIaXdf4jtdlkK+XBY25DTCDgnaUo0QGhyuykkFsM4bTICzpcBeuZUFlib6CHxveeaaMoWAvVkSEa3p0nC+PEnL5h7LnfN6k++kuO2f5O9H1jwuyKo6/DAdsrhomhgzd7yUSt4EyUdVxAw9eri6pBGgiQF8hiupq3oa2S/JdLONO2uVSBcOO0Acy3e1h7N2uUKZ5eswXRc+aCuJ7PMb2YGsRIB4jafiQRUwYy3Ua/5/vKUhFtWblS/xqCTuXQVwYrDtSDWOLep/S/uZ7eypwo9PqnROXAIsM9qOdUa+oZigD4Y9+amyTWuXjLVOffEA=
   - secure: Wu2OBfRyV2WKJWgxzbGFAnP+TDTw+DYp65paWCtsh1WX4jF+1Sw3yMWNauoemupTnO2u2m2by/SYond21cDjda9bdKHp0ibqeGIy+NIXEK2wzoXI/vAoJ0Orew8Bjw/49O58qF1ewZ9vdr4o40XLI+HGKdjQmHk8W+9apRxQci6hgx7JGlAjSBynwaW06XsZDDe7s6fAyumX3xsb5iPSPwDCjksHQpM0Vs2FwyRKg0EzICN+WAWBUZgTrVgyR0/rzWx0b1M4uZENmOdx/LCxnQFl8oKpuF6ikZ5gXbUmY+XJaksOv7JH7+BuC//xQQIr4aoNEsq86fK9oM6T7GCOTXnPRRGFqjl0OMOQnz4yBrMCEbPlIr4rfAPYi6JJIOmxnKYVXXgljuWio4/TGvucUjIfOhFsYnGXIvteMUTOfojB3RZUXNBUxPcJjuwXb5JSnNa7SncbWZcyxfaA//zPURbkyQinTKfWVkU/aBsiDm7h1MZPohrOuNfKyHf4UZ5GwhSE68QUmaz3w+1udbZGSxDwobhvSBruisLdrez5sAgKx1dSmVREMvkda4YSZCz+vWZVixPtOEM3rtWHg0JzN1SljWL8LYmh5ztSn3P5K8/+LNMZ4jMMkcWJ1fx0Ohf8O6lqbJQq09hr/kHKKwGTTsjYcNcu64Mt7m7aJi7NLMs=
 
 matrix:
   include:
     - env: VERSION=master
+    - env: VERSION=zsh-5.8
     - env: VERSION=zsh-5.7.1
     - env: VERSION=zsh-5.7
     - env: VERSION=zsh-5.6.2
