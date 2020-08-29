@@ -64,7 +64,7 @@ To build an image of a branch (see all branches [here](https://github.com/zsh-us
 
 To build an image of a tag (see all tags [here](https://github.com/zsh-users/zsh/tags)):
 
-    make build VERSION=5.4.1
+    make build VERSION=zsh-5.7.1
 
 To build an image of a commit:
 
