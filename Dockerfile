@@ -1,7 +1,10 @@
-FROM bitnami/minideb-extras:stretch-buildpack AS builder
+FROM bitnami/minideb:buster AS builder
 ARG ref=master
 WORKDIR /tmp/zsh-build
-RUN install_packages autoconf \
+RUN install_packages curl \
+                     ca-certificates \
+                     autoconf \
+                     make \
                      libtool \
                      libcap-dev \
                      libtinfo5 \
@@ -31,7 +34,7 @@ RUN yes '' | adduser --shell /bin/sh --home /tmp/zsh-build --disabled-login --di
 RUN chown -R zshtest /tmp/zsh-build
 RUN su - zshtest -c 'make test' || true
 
-FROM bitnami/minideb:stretch
+FROM bitnami/minideb:buster
 LABEL maintainer="https://github.com/zsh-users/zsh-docker"
 WORKDIR /
 COPY --from=builder /tmp/zsh-install /
@@ -39,5 +42,5 @@ RUN install_packages libcap2 \
                      libtinfo5 \
                      libncursesw5 \
                      libpcre3 \
-                     libgdbm3
+                     libgdbm6
 CMD ["/usr/bin/zsh","-l"]
