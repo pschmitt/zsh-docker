@@ -15,8 +15,12 @@ RUN install_packages curl \
                      groff \
                      man-db \
                      texinfo \
-                     groff
+                     patch
 RUN curl -L https://api.github.com/repos/zsh-users/zsh/tarball/$ref | tar xz --strip=1
+
+COPY 0001-signames.patch .
+RUN patch -s -p1 -r /dev/null -i 0001-signames.patch || true
+
 RUN ./Util/preconfig
 RUN ./configure --prefix /usr \
                 --enable-pcre \
