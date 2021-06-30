@@ -1,4 +1,4 @@
-zsh-docker [![Build Status](https://travis-ci.org/zsh-users/zsh-docker.svg?branch=master)](https://travis-ci.org/zsh-users/zsh-docker) [![](https://images.microbadger.com/badges/version/zshusers/zsh.svg)](https://microbadger.com/images/zshusers/zsh) [![](https://images.microbadger.com/badges/image/zshusers/zsh.svg)](https://microbadger.com/images/zshusers/zsh)
+zsh-docker [![Build](https://github.com/zsh-users/zsh-docker/actions/workflows/build.yml/badge.svg)](https://github.com/zsh-users/zsh-docker/actions/workflows/build.yml) [![](https://images.microbadger.com/badges/version/zshusers/zsh.svg)](https://microbadger.com/images/zshusers/zsh) [![](https://images.microbadger.com/badges/image/zshusers/zsh.svg)](https://microbadger.com/images/zshusers/zsh)
 ==========
 
 **[Zsh](http://www.zsh.org) [Docker](https://www.docker.com) containers.**
@@ -7,7 +7,7 @@ zsh-docker [![Build Status](https://travis-ci.org/zsh-users/zsh-docker.svg?branc
 Usage
 -----
 
-The images are based on [`minideb`](https://hub.docker.com/r/bitnami/minideb), and available on [Docker Hub](https://hub.docker.com/r/zshusers/zsh) + [Github container registry](https://github.com/orgs/zsh-users/packages?repo_name=zsh-docker):
+The images are based on [`minideb`](https://hub.docker.com/r/bitnami/minideb), and available on [Docker Hub](https://hub.docker.com/r/zshusers/zsh) + [Github container registry](https://github.com/zsh-users/zsh-docker/pkgs/container/zsh-docker):
 
 | Version                                                                | To execute                           |
 | ---------------------------------------------------------------------- | ------------------------------------ |
