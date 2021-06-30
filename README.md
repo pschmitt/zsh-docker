@@ -7,7 +7,7 @@ zsh-docker [![Build](https://github.com/zsh-users/zsh-docker/actions/workflows/b
 Usage
 -----
 
-The images are based on [`minideb`](https://hub.docker.com/r/bitnami/minideb), and available on [Docker Hub](https://hub.docker.com/r/zshusers/zsh) + [Github container registry](https://github.com/zsh-users/zsh-docker/pkgs/container/zsh-docker):
+The images are based on [`minideb`](https://hub.docker.com/r/bitnami/minideb), and available on [Docker Hub](https://hub.docker.com/r/zshusers/zsh) + [Github container registry](https://github.com/zsh-users/zsh-docker/pkgs/container/zsh):
 
 | Version                                                                | To execute                           |
 | ---------------------------------------------------------------------- | ------------------------------------ |
