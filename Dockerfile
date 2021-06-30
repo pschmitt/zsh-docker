@@ -18,8 +18,10 @@ RUN install_packages curl \
                      patch
 RUN curl -L https://api.github.com/repos/zsh-users/zsh/tarball/$ref | tar xz --strip=1
 
-COPY 0001-signames.patch .
-RUN patch -s -p1 -r /dev/null -i 0001-signames.patch || true
+COPY *.patch ./
+RUN for p in *.patch; do patch -s -p1 -r /dev/null -i $p || true; done
+
+RUN rm -f Test/X02zlevi.ztst
 
 RUN ./Util/preconfig
 RUN ./configure --prefix /usr \
