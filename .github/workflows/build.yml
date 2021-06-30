@@ -1,0 +1,125 @@
+name: Images
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  images:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - docker-tags: 'master'
+            zsh-ref: 'master'
+          - docker-tags: '5.8,latest'
+            zsh-ref: 'zsh-5.8'
+          - docker-tags: '5.7.1'
+            zsh-ref: 'zsh-5.7.1'
+          - docker-tags: '5.7'
+            zsh-ref: 'zsh-5.7'
+          - docker-tags: '5.6.2'
+            zsh-ref: 'zsh-5.6.2'
+          - docker-tags: '5.6.1'
+            zsh-ref: 'zsh-5.6.1'
+          - docker-tags: '5.6'
+            zsh-ref: 'zsh-5.6'
+          - docker-tags: '5.5.1'
+            zsh-ref: 'zsh-5.5.1'
+          - docker-tags: '5.5'
+            zsh-ref: 'zsh-5.5'
+          - docker-tags: '5.4.2'
+            zsh-ref: 'zsh-5.4.2'
+          - docker-tags: '5.4.1'
+            zsh-ref: '5.4.1'
+          - docker-tags: '5.4'
+            zsh-ref: '5.4'
+          - docker-tags: '5.3.1'
+            zsh-ref: 'zsh-5.3.1'
+          - docker-tags: '5.3'
+            zsh-ref: 'zsh-5.3'
+          - docker-tags: '5.2'
+            zsh-ref: 'zsh-5.2'
+          - docker-tags: '5.1.1'
+            zsh-ref: 'zsh-5.1.1'
+          - docker-tags: '5.1'
+            zsh-ref: 'zsh-5.1'
+          - docker-tags: '5.0.8'
+            zsh-ref: 'zsh-5.0.8'
+          - docker-tags: '5.0.7'
+            zsh-ref: 'zsh-5.0.7'
+          - docker-tags: '5.0.6'
+            zsh-ref: 'zsh-5.0.6'
+          - docker-tags: '5.0.5'
+            zsh-ref: 'zsh-5.0.5'
+          - docker-tags: '5.0.4'
+            zsh-ref: 'zsh-5.0.4'
+          - docker-tags: '5.0.3'
+            zsh-ref: 'zsh-5.0.3'
+          - docker-tags: '5.0.2'
+            zsh-ref: 'zsh-5.0.2'
+          - docker-tags: '5.0.1'
+            zsh-ref: 'zsh-5.0.1'
+          - docker-tags: '5.0.0'
+            zsh-ref: 'zsh-5.0.0'
+          - docker-tags: '4.3.17'
+            zsh-ref: 'zsh-4.3.17'
+          - docker-tags: '4.3.16'
+            zsh-ref: 'zsh-4.3.16'
+          - docker-tags: '4.3.15'
+            zsh-ref: 'zsh-4.3.15'
+          - docker-tags: '4.3.14'
+            zsh-ref: 'zsh-4.3.14'
+          - docker-tags: '4.3.13'
+            zsh-ref: 'zsh-4.3.13'
+          - docker-tags: '4.3.12'
+            zsh-ref: 'zsh-4.3.12'
+          - docker-tags: '4.3.11'
+            zsh-ref: 'zsh-4.3.11'
+
+
+    name: ${{ matrix.docker-tags }}
+
+    runs-on: 'ubuntu-latest'
+
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Log in to Github registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate image metadata
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: |
+            zshusers/zsh
+            ghcr.io/${{ github.repository }}
+          tags: ${{ matrix.docker-tags }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: ref=${{ matrix.zsh-ref }}

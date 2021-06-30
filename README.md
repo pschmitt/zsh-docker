@@ -7,7 +7,7 @@ zsh-docker [![Build Status](https://travis-ci.org/zsh-users/zsh-docker.svg?branc
 Usage
 -----
 
-The images are based on [`minideb`](https://hub.docker.com/r/bitnami/minideb), and available on [Docker Hub](https://hub.docker.com/r/zshusers/zsh):
+The images are based on [`minideb`](https://hub.docker.com/r/bitnami/minideb), and available on [Docker Hub](https://hub.docker.com/r/zshusers/zsh) + [Github container registry](https://github.com/orgs/zsh-users/packages?repo_name=zsh-docker):
 
 | Version                                                                | To execute                           |
 | ---------------------------------------------------------------------- | ------------------------------------ |
@@ -56,20 +56,16 @@ To build images, the requirements are:
 
 To build an image of zsh's current `master` branch:
 
-    make build VERSION=master
+    docker build --tag zshusers/zsh:master --build-arg ref=master .
 
 To build an image of a branch (see all branches [here](https://github.com/zsh-users/zsh/branches)):
 
-    make build VERSION=schaefer/badarrays
+    docker build --tag zshusers/zsh:badarrays --build-arg ref=schaefer/badarrays .
 
 To build an image of a tag (see all tags [here](https://github.com/zsh-users/zsh/tags)):
 
-    make build VERSION=zsh-5.7.1
+    docker build --tag zshusers/zsh:5.7.1 --build-arg ref=zsh-5.7.1 .
 
 To build an image of a commit:
 
-    make build VERSION=8abbaefaee7af75943b2b427205d0ec4a52a9b7b
-
-To deploy an image to [Docker Hub](https://hub.docker.com):
-
-    make deploy
+    docker build --tag zshusers/zsh:8abbaefaee7af75943b2b427205d0ec4a52a9b7b --build-arg ref=8abbaefaee7af75943b2b427205d0ec4a52a9b7b .
