@@ -38,7 +38,7 @@ RUN make install DESTDIR=/tmp/zsh-install
 RUN make install.info DESTDIR=/tmp/zsh-install || true
 RUN yes '' | adduser --shell /bin/sh --home /tmp/zsh-build --disabled-login --disabled-password zshtest
 RUN chown -R zshtest /tmp/zsh-build
-RUN su - zshtest -c 'make test' || true
+RUN su - zshtest -c 'timeout 120 make test' || true
 
 FROM bitnami/minideb:buster
 LABEL maintainer="https://github.com/zsh-users/zsh-docker"
