@@ -114,6 +114,13 @@ jobs:
             zshusers/zsh
             ghcr.io/${{ github.repository }}
           tags: ${{ matrix.docker-tags }}
+          labels: |
+            maintainer=https://github.com/zsh-users
+            org.opencontainers.image.title=zsh
+            org.opencontainers.image.description=Zsh is a shell designed for interactive use, although it is also a powerful scripting language.
+            org.opencontainers.image.url=https://www.zsh.org
+            org.opencontainers.image.source=https://github.com/zsh-users/zsh-docker
+            org.opencontainers.image.licenses=https://raw.githubusercontent.com/zsh-users/zsh/master/LICENCE
 
       - name: Build and push image
         uses: docker/build-push-action@v2
