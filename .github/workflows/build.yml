@@ -141,6 +141,9 @@ jobs:
             org.opencontainers.image.source=https://github.com/zsh-users/zsh-docker
             org.opencontainers.image.licenses=https://raw.githubusercontent.com/zsh-users/zsh/master/LICENCE
 
+      - name: Setup multi arch build
+        run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+
       - name: Build and push image
         uses: docker/build-push-action@v2
         with:
