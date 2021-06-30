@@ -21,8 +21,6 @@ RUN curl -L https://api.github.com/repos/zsh-users/zsh/tarball/$ref | tar xz --s
 COPY *.patch ./
 RUN for p in *.patch; do patch -s -p1 -r /dev/null -i $p || true; done
 
-RUN rm -f Test/X02zlevi.ztst
-
 RUN ./Util/preconfig
 RUN ./configure --prefix /usr \
                 --enable-pcre \
