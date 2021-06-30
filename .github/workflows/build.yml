@@ -17,7 +17,9 @@ jobs:
         include:
           - docker-tags: 'master'
             zsh-ref: 'master'
-          - docker-tags: '5.8,latest'
+          - docker-tags: |
+              5.8
+              latest
             zsh-ref: 'zsh-5.8'
           - docker-tags: '5.7.1'
             zsh-ref: 'zsh-5.7.1'
