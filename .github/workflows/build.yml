@@ -118,7 +118,7 @@ jobs:
         with:
           images: |
             zshusers/zsh
-            ghcr.io/${{ github.repository }}
+            ghcr.io/zsh-users/zsh
           tags: ${{ matrix.docker-tags }}
           labels: |
             maintainer=https://github.com/zsh-users
