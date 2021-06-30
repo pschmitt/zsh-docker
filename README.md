@@ -68,4 +68,4 @@ To build an image of a tag (see all tags [here](https://github.com/zsh-users/zsh
 
 To build an image of a commit:
 
-    docker build --tag zshusers/zsh:8abbaefaee7af75943b2b427205d0ec4a52a9b7b --build-arg ref=8abbaefaee7af75943b2b427205d0ec4a52a9b7b .
+    docker build --tag zshusers/zsh:mytag --build-arg ref=8abbaefaee7af75943b2b427205d0ec4a52a9b7b .
