@@ -22,12 +22,19 @@ COPY *.patch ./
 RUN for p in *.patch; do patch -s -p1 -r /dev/null -i $p || true; done
 
 RUN ./Util/preconfig
-RUN ./configure --prefix /usr \
+RUN build_platform=x86_64; \
+    case "$(dpkg --print-architecture)" in \
+      arm64) \
+        build_platform="aarch64" \
+        ;; \
+    esac; \
+    ./configure --prefix /usr \
                 --enable-pcre \
                 --enable-cap \
                 --enable-multibyte \
                 --with-term-lib='ncursesw tinfo' \
-                --with-tcsetpgrp
+                --with-tcsetpgrp \
+                --build=${build_platform}-unknown-linux-gnu
 RUN make
 RUN make -C Etc all FAQ FAQ.html
 RUN if test $ref = "master" ; then install_packages cm-super-minimal texlive-fonts-recommended texlive-latex-base texlive-latex-recommended ghostscript bsdmainutils ; fi
