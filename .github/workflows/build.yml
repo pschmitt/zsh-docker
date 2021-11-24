@@ -127,8 +127,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            zshusers/zsh
-            ghcr.io/zsh-users/zsh
+            ghcr.io/${{ github.repository }}
           tags: ${{ matrix.docker-tags }}
           labels: |
             maintainer=https://github.com/zsh-users
